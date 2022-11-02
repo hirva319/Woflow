@@ -51,7 +51,12 @@ public class Example
         Example.nodeList = new List<string>();
         var value = countNode(id);
         Console.WriteLine(value);
-        var top = nodeList.GroupBy(i => i).OrderByDescending(grp => grp.Count())
+        var top = nodeList.GroupBy(id => id).OrderByDescending(grp => grp.Count())
       .Select(grp => grp.Key).First();
+
+        //Solution
+        //Node Count: 8
+        //Most common: 263a3e61-2eae-4dee-a15b-5c0dacad4db4
+
     }
 }
